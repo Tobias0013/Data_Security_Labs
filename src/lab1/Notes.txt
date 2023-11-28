@@ -1,0 +1,8 @@
+ciphertext.enc:
+1. 128-bytes (1028 bits) of a symmetric key encrypted with RSA using the public key “lab1EncKeys”
+2. then we have 128-byte of encrypted IV-value to be used in the decryption of the data
+3. Before the actual encrypted data, there is another block of 128-byte
+ containing encrypted key for a HmacMD5
+
+
+
