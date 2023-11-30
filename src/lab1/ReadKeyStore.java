@@ -20,19 +20,6 @@ public class ReadKeyStore {
         this.keyPassword = keyPassword;
     }
 
-    public ReadKeyStore() {
-    }
-
-    public ReadKeyStore setDefaultValues(){
-        return new ReadKeyStore("src/lab1/files/lab1Store", "lab1StorePass".toCharArray(),
-                "lab1EncKeys", "lab1KeyPass".toCharArray());
-        // TODO: 2023-11-28 TA BORT
-        // this.path = "src/lab1/files/lab1Store";
-        // this.storePassword = "lab1StorePass".toCharArray();
-        // this.alias = "lab1EncKeys";
-        // this.keyPassword = "lab1KeyPass".toCharArray();
-    }
-
     public RSAPrivateKey getKey() {
         if (this.key == null){
             loadKey();
@@ -58,5 +45,8 @@ public class ReadKeyStore {
         }
     }
 
-
+    public static ReadKeyStore setDefaultValues(){
+        return new ReadKeyStore("src/lab1/files/lab1Store", "lab1StorePass".toCharArray(),
+                "lab1EncKeys", "lab1KeyPass".toCharArray());
+    }
 }

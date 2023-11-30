@@ -22,13 +22,6 @@ public class ReadCiphertext {
         this.path = path;
     }
 
-    public ReadCiphertext() {
-    }
-
-    public ReadCiphertext setDefaultValue(){
-        return new ReadCiphertext("src/lab1/files/ciphertext.enc");
-    }
-
     public byte[] getData() {
         if (data == null){
             run();
@@ -95,6 +88,10 @@ public class ReadCiphertext {
 
     private void readCiphertext(){
         this.ciphertext = Arrays.copyOfRange(data, 384, data.length);
+    }
+
+    public static ReadCiphertext setDefaultValue(){
+        return new ReadCiphertext("src/lab1/files/ciphertext.enc");
     }
 
 }

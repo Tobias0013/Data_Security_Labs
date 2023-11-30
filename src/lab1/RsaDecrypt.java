@@ -16,16 +16,6 @@ public class RsaDecrypt {
         createCipher();
     }
 
-    public RsaDecrypt() {
-    }
-
-    public void setValues(byte[] ciphertext, RSAPrivateKey privateKey){
-        this.ciphertext = ciphertext;
-        this.privateKey = privateKey;
-
-        createCipher();
-    }
-
     public byte[] getDecrypted() {
         if (decrypted == null){
             decryptText();

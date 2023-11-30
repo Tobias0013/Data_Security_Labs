@@ -6,8 +6,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.security.interfaces.RSAPrivateKey;
-import java.util.Arrays;
 
 public class AesDecrypt {
     private Cipher dec;
@@ -70,7 +68,7 @@ public class AesDecrypt {
         }
     }
 
-    private void decrypt(){
+    public void decrypt(){
         try {
             this.decrypted = dec.doFinal(this.ciphertext);
         }
