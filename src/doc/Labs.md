@@ -90,10 +90,7 @@ plaintext and the sender’s private key as inputs.
 - [x] Calculate the digital signature
 - [x] Compare digital signature with files to find out which one is real
 
-
-
-
-
+---
 
 
 

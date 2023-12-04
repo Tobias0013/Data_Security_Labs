@@ -1,8 +1,6 @@
 package lab1;
 
-import java.util.Arrays;
-
-public class Labs { // TODO: 2023-11-29 refactor all class variables
+public class Labs {
     private AesDecrypt message;
     private RsaDecrypt key1;
     private RsaDecrypt iv;
@@ -18,12 +16,11 @@ public class Labs { // TODO: 2023-11-29 refactor all class variables
 
     public void decryptCiphertext(){ // Lab1, Task1/Task2
         ReadKeyStore readKeyStore = ReadKeyStore.setDefaultValues();
-        ReadCiphertext ciphertext = ReadCiphertext.setDefaultValue();;
+        ReadCiphertext ciphertext = ReadCiphertext.setDefaultValue();
 
         this.key1 = new RsaDecrypt(ciphertext.getEncKey1(), readKeyStore.getKey());
         this.iv = new RsaDecrypt(ciphertext.getEncIv(), readKeyStore.getKey());
         this.key2 = new RsaDecrypt(ciphertext.getEncKey2(), readKeyStore.getKey());
-
 
         this.message = new AesDecrypt(ciphertext.getCiphertext(),
                 key1.getDecrypted(), iv.getDecrypted());

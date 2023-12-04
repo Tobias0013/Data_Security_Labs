@@ -60,10 +60,11 @@ public class ReadCiphertext {
     public void run(){
         try {
             readBytes();
-        } catch (IOException e) {
-            System.out.println("error in ReadCiphertext run()"); // TODO: 2023-11-28 Error message?
+        }
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         readEncKey1();
         readEncIv();
         readEncKey2();
